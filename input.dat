@@ -1,0 +1,22 @@
+s                 = 1e-1               # cm
+rho               = 3                  # g/cc
+time_unit         = 31536000           # 1 year
+dt_min            = 0.05              # * time unit, minimum dt in simulation, also determines hydro frame rate. If tracer particles this will be the dt.
+dt_max            = 0.05              # * time unit, maximum dt in simulation. Set equal to dt_min to disable ATD.
+output_dt         = 50                 # * time_unit
+total_time        = 500000             # * time_unit
+min_stopping_time = 0.00125              # minimum stopping time in time_unit
+rmin              = 1.496e14           # 10 AU
+rmax              = 1.496e17 	       # 1e4 AU
+nr                = 160                # number of cell in r direction
+thetamin          = 0		           #
+thetamax          = 3.141592653589793  #
+ntheta            = 64                 # number of cell in theta direction
+particle_type     = 0                  # type of particle, <0.5: dust, 0.5< x <1.5: tracer
+num_core          = 8                  # number of cores used
+start_fn          = HotCore.out1.01200.athdf
+restart           = 0                  # 1=True, 0=False
+restart_fn        = frame00160.npz   # restart file, used only if restart is 1
+hydro_dir         = H:\StarFormation\test_sim4\small_hole_more_frames\athdf\ # /scratch/yt2cr/athena_rundir/test_sim4/small_hole_more_frames/out/athdf/
+num_hydro_load    = 10                 # number of hydro (athdf) frames read in at a time. Total time must be larger than dt
+num_par           = 100000             # number of particles to be created
